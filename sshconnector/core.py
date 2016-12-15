@@ -23,9 +23,6 @@ from gevent.pool import Pool
 from gevent import monkey
 from multiprocessing import cpu_count
 
-
-__version__ = '0.0.3'
-
 monkey.patch_all()
 plat = sys.platform
 

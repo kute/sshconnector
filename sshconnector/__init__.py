@@ -8,7 +8,7 @@
 
 """
 
-from .core import __version__
+from .core import SSHConnector, SFTPMutilthread
 
 
 def main():
