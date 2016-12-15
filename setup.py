@@ -10,7 +10,12 @@ with open(join(dirname(__file__), 'sshconnector/VERSION'), 'rb') as f:
 
 required = [
     "paramiko>=2.0.2",
-    "gevent>=1.1.2"
+    "gevent>=1.1.2",
+    "greenlet>=0.4.10",
+    "cryptography>=1.5.2",
+    "pyasn1>=0.1.9",
+    "idna>=2.1",
+    "six>=1.10.0"
 ]
 
 setup(
