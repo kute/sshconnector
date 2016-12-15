@@ -11,7 +11,7 @@ with open(join(dirname(__file__), 'sshconnector/VERSION'), 'rb') as f:
 required = []
 
 setup(
-    name='envoy',
+    name='sshconnector',
     version=version,
     description='Simple API for connect server by ssh, execing command and uploading/downloading file by sftp.',
     long_description=open('README.rst').read(),
