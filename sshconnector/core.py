@@ -13,7 +13,6 @@ http://blog.csdn.net/kutejava/article/details/52880573
 
 """
 
-import argparse
 import sys
 import socket
 import traceback

@@ -8,7 +8,10 @@ from setuptools import setup, find_packages
 with open(join(dirname(__file__), 'sshconnector/VERSION'), 'rb') as f:
     version = f.read().decode('ascii').strip()
 
-required = []
+required = [
+    "paramiko>=2.0.2",
+    "gevent>=1.1.2"
+]
 
 setup(
     name='sshconnector',
