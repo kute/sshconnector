@@ -21,6 +21,8 @@ from paramiko import SSHException, AuthenticationException
 from gevent.pool import Pool
 from gevent import monkey
 from multiprocessing import cpu_count
+import eventor
+
 
 monkey.patch_all()
 plat = sys.platform
@@ -177,11 +179,9 @@ class SFTPMutilthread(object):
             raise SSHException(err)
 
     def start(self):
-            """download same file with multi thread from multi server.
-            """
-            cpunum = cpu_count()
-            pool = Pool(cpunum)
-            pool.map(self._download_mutil, self.server_source)
+        """download same file with multi thread from multi server.
+        """
+        eventor.start_multi_consumer(iterable=self.serversource, consumer_func=self._download_mutil)
 
 
 def main():
